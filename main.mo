@@ -1,14 +1,10 @@
-// variables (let -> immutable, var -> mutable)
-// canister
-
 actor calculator {
 
-  var cell : Int = 0;
+  var cell : Int = 0;   // variables (let -> immutable, var -> mutable)
 
   public func addition(s : Int) : async Int {
     cell += s;
     cell
-    //(Debug.print(debug_show (cell));)
   };
 
   public func subtraction(s : Int) : async Int {
@@ -30,7 +26,6 @@ actor calculator {
     }
   };
 
-  //clear
   public func clear() : async () {
     cell := 0
   };
